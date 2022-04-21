@@ -1,0 +1,71 @@
+{
+  "info": {
+    "description": "",
+    "version": "1.0.0",
+    "title": "Fhir"
+  },
+  "schemes": [
+    "http","https"
+  ],
+  "tags": [
+
+  ],
+  "paths": {
+    "/api/v1/login": {
+      "post": {
+        "tags": [
+          "login"
+        ],
+        "summary": "login",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "add request",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/login"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "login": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "format": "string"
+        },
+        "password": {
+          "type": "string",
+          "format": "string"
+        }
+      }
+    }
+  },
+  "swagger": "2.0"
+}
