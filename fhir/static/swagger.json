@@ -19,13 +19,6 @@
         "summary": "login",
         "parameters": [
           {
-            "in": "header",
-            "name": "Authorization",
-            "type": "string",
-            "description": "",
-            "required": true
-          },
-          {
             "in": "body",
             "name": "add request",
             "description": "",
