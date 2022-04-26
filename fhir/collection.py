@@ -1,5 +1,6 @@
 from fhir import db
 
 class User(db.Document):
-    username = db.StringField()
+    useremail = db.EmailField()
     password = db.StringField()
+

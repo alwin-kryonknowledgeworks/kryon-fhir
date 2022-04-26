@@ -43,17 +43,145 @@
           }
         }
       }
+    },
+    "/api/v1/search": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "summary": "search",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "resource_type",
+            "type": "string",
+            "description": "",
+            "required": true
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/user": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "add user",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "add request",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/user"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },"get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "get user",
+        "parameters": [
+           {
+            "in": "header",
+            "name": "Authorization",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "in": "query",
+            "name": "useremail",
+            "type": "string",
+            "description": "",
+            "required": true
+          }
+
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
     }
+
   },
   "definitions": {
     "login": {
       "type": "object",
       "properties": {
-        "username": {
+        "useremail": {
           "type": "string",
           "format": "string"
         },
         "password": {
+          "type": "string",
+          "format": "string"
+        }
+      }
+    },"user": {
+      "type": "object",
+      "properties": {
+        "useremail": {
+          "type": "string",
+          "format": "string"
+        },
+        "password": {
+          "type": "string",
+          "format": "string"
+        }
+      }
+    },"search": {
+      "type": "object",
+      "properties": {
+        "resource_type": {
           "type": "string",
           "format": "string"
         }
