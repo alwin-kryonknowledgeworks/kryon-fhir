@@ -14,13 +14,13 @@ def login():
         return jsonify({
             "status": "Error",
             "errors": validation_result.get("error")
-        })
+        }),401
     user = User.objects(useremail__in=[data.get("useremail")]).first()
     if not user:
         return jsonify({
             "warnings":[],
             "errors":"wrong_useremail"
-        })
+        }),401
 
     if user:
       if sha256_crypt.verify(data.get("password"), user.password):
@@ -30,4 +30,4 @@ def login():
     return jsonify({
         "warnings":[],
         "errors":"wrong_password"
-    }),400
+    }),401

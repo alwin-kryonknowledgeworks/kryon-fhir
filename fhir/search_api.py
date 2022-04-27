@@ -9,7 +9,7 @@ from fhir import app, fhir_collection
 def find():
     resource=request.args.get("resource_type")
     if not resource:
-        return jsonify({'return':"error"}),400
+        return jsonify({'return':"error"}),401
     pipeline = [
         {
             "$match":
