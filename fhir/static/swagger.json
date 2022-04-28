@@ -44,6 +44,39 @@
         }
       }
     },
+     "/api/v1/validate": {
+      "post": {
+        "tags": [
+          "validate"
+        ],
+        "summary": "otp validate",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "add request",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/validate"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
     "/api/v1/search": {
       "get": {
         "tags": [
@@ -89,6 +122,13 @@
         ],
         "summary": "add user",
         "parameters": [
+          {
+            "in": "header",
+            "name": "Authorization",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
           {
             "in": "body",
             "name": "add request",
@@ -166,6 +206,19 @@
           "format": "string"
         }
       }
+    },
+    "validate": {
+      "type": "object",
+      "properties": {
+        "useremail": {
+          "type": "string",
+          "format": "string"
+        },
+        "otp": {
+          "type": "string",
+          "format": "string"
+        }
+      }
     },"user": {
       "type": "object",
       "properties": {
@@ -174,14 +227,6 @@
           "format": "string"
         },
         "password": {
-          "type": "string",
-          "format": "string"
-        }
-      }
-    },"search": {
-      "type": "object",
-      "properties": {
-        "resource_type": {
           "type": "string",
           "format": "string"
         }
