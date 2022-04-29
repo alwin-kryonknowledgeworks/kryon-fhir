@@ -15,16 +15,16 @@ def login():
             "status": "Error",
             "errors": validation_result.get("error")
         }),401
-    user = User.objects(useremail__in=[data.get("useremail")]).first()
+    user = User.objects(user_email__in=[data.get("user_email")]).first()
     if not user:
         return jsonify({
             "warnings":[],
-            "errors":"wrong_useremail"
+            "errors":"wrong_user_email"
         }),401
 
     if user:
       if sha256_crypt.verify(data.get("password"), user.password):
-        access_token = create_access_token(identity=user.useremail)
+        access_token = create_access_token(identity=user.user_email)
         return jsonify({"access_token":access_token}),200
 
     return jsonify({

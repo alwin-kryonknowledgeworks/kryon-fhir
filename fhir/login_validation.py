@@ -2,7 +2,7 @@ from kanpai import Kanpai
 
 
 schema = Kanpai.Object({
- "useremail"    : (Kanpai.Email(error='User email must be email.')
+ "user_email"    : (Kanpai.Email(error='User email must be email.')
                   .trim()
                   .required(error='Please provide user email.')
                   .max(50, error='Maximum allowed length is 50')

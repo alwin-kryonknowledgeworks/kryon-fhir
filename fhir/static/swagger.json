@@ -77,6 +77,72 @@
         }
       }
     },
+     "/api/v1/password_validate": {
+      "post": {
+        "tags": [
+          "validate"
+        ],
+        "summary": "password validate",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "add request",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/password_validate"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+     "/api/v1/forgot_password": {
+      "post": {
+        "tags": [
+          "forgot_password"
+        ],
+        "summary": "forgot_password",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "add request",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/forgot_password"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
     "/api/v1/search": {
       "get": {
         "tags": [
@@ -96,7 +162,7 @@
             "name": "resource_type",
             "type": "string",
             "description": "",
-            "required": true
+            "required": true,
           }
         ],
         "produces": [
@@ -168,7 +234,7 @@
           },
           {
             "in": "query",
-            "name": "useremail",
+            "name": "user_email",
             "type": "string",
             "description": "",
             "required": true
@@ -197,7 +263,7 @@
     "login": {
       "type": "object",
       "properties": {
-        "useremail": {
+        "user_email": {
           "type": "string",
           "format": "string"
         },
@@ -210,7 +276,7 @@
     "validate": {
       "type": "object",
       "properties": {
-        "useremail": {
+        "user_email": {
           "type": "string",
           "format": "string"
         },
@@ -219,10 +285,32 @@
           "format": "string"
         }
       }
+    },
+    "password_validate": {
+      "type": "object",
+      "properties": {
+        "password": {
+          "type": "string",
+          "format": "string"
+        },
+        "otp": {
+          "type": "string",
+          "format": "string"
+        }
+      }
+    },
+    "forgot_password": {
+      "type": "object",
+      "properties": {
+        "user_email": {
+          "type": "string",
+          "format": "string"
+        }
+      }
     },"user": {
       "type": "object",
       "properties": {
-        "useremail": {
+        "user_email": {
           "type": "string",
           "format": "string"
         },
