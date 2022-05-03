@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+// light theme
+// color
+$li-primary:#5156be;
+$li-secondary:#74788d;
+$li-success:#2ab57d;
+$li-info:#4ba6ef;
+$li-warning:#ffbf53;
+$li-danger:#fd625e;
+$li-dark:#343a40;
+$li-link:#ffff;
+$li-light:#e9e9ef;
+// bg 
+$li-bg-primary:#5156be;
+$li-bg-secondary:#74788d;
+$li-bg-success:#2ab57d;
+$li-bg-info:#4ba6ef;
+$li-bg-warning:#ffbf53;
+$li-bg-danger:#fd625e;
+$li-bg-dark:#343a40;
+$li-bg-link:#ffff;
+$li-bg-light:#e9e9ef;
+// border
+$li-border-primary:#5156be;
+$li-border-secondary:#74788d;
+$li-border-success:#2ab57d;
+$li-border-info:#4ba6ef;
+$li-border-warning:#ffbf53;
+$li-border-danger:#fd625e;
+$li-border-dark:#343a40;
+$li-border-link:#ffff;
+$li-border-light:#e9e9ef;
+// font
+$li-font-primary:#5156be;
+$li-font-secondary:#74788d;
+$li-font-success:#2ab57d;
+$li-font-info:#4ba6ef;
+$li-font-warning:#ffbf53;
+$li-font-danger:#fd625e;
+$li-font-dark:#343a40;
+$li-font-link:#ffff;
+$li-font-light:#e9e9ef;
+
+
+
+// dark theme
+// color
+$da-primary:#5156be;
+$da-secondary:#74788d;
+$da-success:#2ab57d;
+$da-info:#4ba6ef;
+$da-warning:#ffbf53;
+$da-danger:#fd625e;
+$da-dark:#343a40;
+$da-link:#ffff;
+$da-light:#e9e9ef;
+// bg
+$da-bg-primary:#5156be;
+$da-bg-secondary:#74788d;
+$da-bg-success:#2ab57d;
+$da-bg-info:#4ba6ef;
+$da-bg-warning:#ffbf53;
+$da-bg-danger:#fd625e;
+$da-bg-dark:#343a40;
+$da-bg-link:#f6f6f6;
+$da-bg-light:#e9e9ef;
+// border
+$da-border-primary:#5156be;
+$da-border-secondary:#74788d;
+$da-border-success:#2ab57d;
+$da-border-info:#4ba6ef;
+$da-border-warning:#ffbf53;
+$da-border-danger:#fd625e;
+$da-border-dark:#343a40;
+$da-border-link:#ffff;
+$da-border-light:#e9e9ef;
+// font
+$da-font-primary:#5156be;
+$da-font-secondary:#74788d;
+$da-font-success:#2ab57d;
+$da-font-info:#4ba6ef;
+$da-font-warning:#ffbf53;
+$da-font-danger:#fd625e;
+$da-font-dark:#343a40;
+$da-font-link:#ffff;
+$da-font-light:#e9e9ef;
+
+@import './styles/light_theme/light_theme.scss';
+@import './styles/dark_theme/dark_theme.scss';
