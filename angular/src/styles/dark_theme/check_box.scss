@@ -1,0 +1,15 @@
+:root[theme='dark'] {
+
+    .form-check-input {
+        border: 1px solid;
+        border-color: $da-border-secondary;
+        background-color: $da-font-secondary;
+
+    }
+
+    .form-check-label {
+        color: $da-font-light;
+        font-size: 'ProximaNova-bold' !important;
+        font-size: 15px;
+    }
+}

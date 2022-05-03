@@ -1,4 +1,6 @@
 :root[theme='dark']{
-    // color: greenyellow;
+    background-color:$da-bg-dark;
 }
 @import './button.scss';
+@import './form.scss';
+@import './check_box.scss'

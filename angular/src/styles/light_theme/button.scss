@@ -1,3 +1,6 @@
-.aaa{
-    color: $li-primary !important;
+.btn-primary,.btn-primary:hover {
+    color: $li-font-light;
+    background-color: $li-bg-primary;
+    border-color: $li-border-primary;
+    
 }

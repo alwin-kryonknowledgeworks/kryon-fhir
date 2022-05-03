@@ -90,5 +90,19 @@ $da-font-dark:#343a40;
 $da-font-link:#ffff;
 $da-font-light:#e9e9ef;
 
+// font family
+@font-face {
+    font-family:'ProximaNova-Regular';
+    src: url(./assets/font_family/ProximaNova-Regular.otf);
+}
+@font-face {
+    font-family:'ProximaNova-bold';
+    src: url(./assets/font_family/ProximaNovaAlt-Bold.otf);
+}
+
+
+body{
+    background: #343a40 !important
+}
 @import './styles/light_theme/light_theme.scss';
 @import './styles/dark_theme/dark_theme.scss';

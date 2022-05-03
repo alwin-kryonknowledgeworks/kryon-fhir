@@ -13,12 +13,12 @@ export class AppComponent {
 
     private themesService: ThemesService
   ) {
-
+    this.theme()
   }
   theme() {
    this.theme_value = !this.theme_value;
    console.log(this.theme_value);
-   if (this.theme_value == true) {
+   if (this.theme_value == false) {
    this.themesService.theme_change('dark');
      
    } else {

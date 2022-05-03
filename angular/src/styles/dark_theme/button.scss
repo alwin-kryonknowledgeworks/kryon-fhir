@@ -1,6 +1,10 @@
+:root[theme='dark'] {
 
-:root[theme='dark']{
-    .aaa{
-        color: $da-primary !important;
+    .btn-primary,
+    .btn-primary:hover {
+        color: $li-font-light;
+        background-color: $li-bg-primary;
+        border-color: $li-border-primary;
+
     }
 }

@@ -1,0 +1,21 @@
+:root[theme='dark'] {
+    .form-group {
+        background-color: $da-bg-dark;
+    }
+
+    .form-control {
+        border: 1px solid;
+        border-color: $da-border-secondary;
+        background-color: $da-border-secondary;
+    }
+
+    .form-label {
+        color: $da-font-light;
+    }
+
+    .form-text {
+        color: $da-font-light;
+    }
+
+
+}
