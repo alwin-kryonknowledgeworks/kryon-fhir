@@ -1,9 +1,14 @@
+.logo-txt{
+    font-family: 'ProximaNova-bold';
+    font-size: 23px;
+}
 .card{
     margin-left: 575px;
-    margin-top: 150px;
-    background: #1F2940;
+     
 }
-
+.card-header{
+    background-color:white;
+}
 .from_group{
     padding-left: 30px;
     padding-right: 30px;
@@ -24,31 +29,15 @@
     font-size: 15px;
     color: #86879E;
 }
-.form-label{
-    font-family: 'ProximaNova-bold';
-    font-size: 15px;
-    color: #86879E;
-}
-.form-control{
-    font-family: 'ProximaNova-Regular';
-    font-size: 15px;
-    color: #86879E;
-    
-}
-.form-check-label{
-    font-family: 'ProximaNova-bold';
-    font-size: 15px;
-    color: #86879E;
+.input-group-text{
+    margin-top: -37px;
+    margin-left: 345px
 }
 .pass{
     margin-left: 135px;
     font-family: 'ProximaNova-Regular';
     font-size: 15px;
     color: #86879E;
-}
-.btn{
-    font-family:'ProximaNova-Regular';
-    font-size: 16px;
 }
 .account{
     margin-top: 20px;
