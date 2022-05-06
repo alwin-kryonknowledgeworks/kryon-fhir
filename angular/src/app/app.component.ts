@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemesService } from './service/themes.service';
+import  { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { ThemesService } from './service/themes.service';
 })
 export class AppComponent {
   title = 'kryon-fhir';
+
+ envi_setup = environment.env
+
   theme_value = false;
   constructor(
 
