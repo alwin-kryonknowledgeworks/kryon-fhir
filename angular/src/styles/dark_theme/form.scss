@@ -7,10 +7,14 @@
         border: 1px solid;
         border-color: $da-border-secondary;
         background-color: $da-border-secondary;
+        font-family: 'ProximaNova-Regular';
+        font-size: 15px;
     }
 
     .form-label {
         color: $da-font-light;
+        font-family: 'ProximaNova-bold';
+        font-size: 15px;
     }
 
     .form-text {

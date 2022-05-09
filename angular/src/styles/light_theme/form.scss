@@ -5,8 +5,12 @@
     border: 1px solid;
     border-color: $li-border-secondary;
     background-color: $li-bg-link;
+    font-family: 'ProximaNova-Regular';
+    font-size: 15px;
 }.form-label{
     color:$li-font-dark;
+    font-family: 'ProximaNova-bold';
+    font-size: 15px;
 }
 .form-text{
     color:$li-font-dark; 
