@@ -162,7 +162,7 @@
             "name": "resource_type",
             "type": "string",
             "description": "",
-            "required": true,
+            "required": true
           }
         ],
         "produces": [

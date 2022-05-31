@@ -21,3 +21,5 @@ def find():
         del i['_id']
 
     return jsonify({'result': list_group}), 200
+
+

@@ -4,7 +4,7 @@ from flask import request, jsonify, render_template
 from flask_mail import Message, Mail
 from passlib.hash import sha256_crypt
 from fhir import app
-from fhir.collection import User
+from fhir.database_collection.collection import User
 
 mail = Mail(app)
 otp = randint(000000, 999999)

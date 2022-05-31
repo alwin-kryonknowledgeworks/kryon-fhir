@@ -2,8 +2,8 @@ from flask import request, jsonify
 from fhir import app
 from flask_jwt_extended import create_access_token
 from passlib.hash import sha256_crypt
-from fhir.collection import User
-from fhir.login_validation import schema
+from fhir.database_collection.collection import User
+from fhir.validation.login_validation import schema
 
 
 @app.route('/api/v1/login', methods=['POST'])

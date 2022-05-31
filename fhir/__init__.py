@@ -7,12 +7,13 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 mail = Mail(app)
-client =MongoClient()
+
 app.config['MONGODB_SETTINGS'] = {
     'db': 'fhir',
     'host': 'localhost',
     'port': 27017
 }
+client =MongoClient()
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = ''
@@ -31,5 +32,10 @@ clustor=client['fhir']
 fhir_collection=clustor['fhir_resources']
 db = MongoEngine(app)
 
-from fhir import collection,user,login_api, swagger, static,login_validation,search_api,user_create_api
+from fhir.database_collection import collection,user
+from fhir.api import login_api,search_api,user_create_api,patient_api,appointment_api
+from fhir.config import swagger
+from fhir.validation import login_validation
 
+
+# app.run()
